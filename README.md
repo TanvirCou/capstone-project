@@ -6,24 +6,6 @@ A responsive **Settings Page** built with HTML, CSS, and vanilla JavaScript. Thi
 
 ---
 
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Branch Structure](#branch-structure)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Validation Rules](#validation-rules)
-- [AI Development Workflow](#ai-development-workflow)
-- [Accessibility](#accessibility)
-- [Development Guidelines](#development-guidelines)
-- [Git Workflow](#git-workflow)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## Features
 
 - Responsive layout for desktop and mobile
