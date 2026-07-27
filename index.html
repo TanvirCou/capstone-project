@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="index.html">Capstone</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav__link site-nav__link--active" href="index.html">Home</a>
+          <a class="site-nav__link" href="settings.html">Settings</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <section class="card hero-card">
+        <h1>Welcome</h1>
+        <p class="hero-card__text">
+          Manage your profile and preferences from the settings page.
+        </p>
+        <a class="btn btn--primary" href="settings.html">Go to Settings</a>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        try {
+          var settings = JSON.parse(localStorage.getItem("userSettings") || "{}");
+          if (settings.theme) {
+            document.documentElement.setAttribute("data-theme", settings.theme);
+          }
+        } catch (_) {}
+      })();
+    </script>
+  </body>
+</html>
