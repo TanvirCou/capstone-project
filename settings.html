@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — Capstone Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-header__inner">
+            <a href="index.html" class="app-header__brand">Capstone Project</a>
+            <nav class="app-nav" aria-label="Main navigation">
+                <a href="index.html" class="app-nav__link">Home</a>
+                <a href="settings.html" class="app-nav__link app-nav__link--active" aria-current="page">Settings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and application settings.</p>
+        </div>
+
+        <form id="settings-form" novalidate>
+            <section class="card" aria-labelledby="profile-heading">
+                <div class="card__header">
+                    <h2 id="profile-heading">Profile</h2>
+                    <p>Update your personal information.</p>
+                </div>
+                <div class="card__body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="display-name">Display name</label>
+                            <input type="text" id="display-name" name="displayName" placeholder="Your name" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="preferences-heading">
+                <div class="card__header">
+                    <h2 id="preferences-heading">Preferences</h2>
+                    <p>Customize how the application looks and behaves.</p>
+                </div>
+                <div class="card__body">
+                    <div class="form-group">
+                        <label for="theme">Theme</label>
+                        <select id="theme" name="theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="system">System default</option>
+                        </select>
+                        <p class="hint">Choose your preferred color scheme.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language" name="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-row__info">
+                            <label for="email-notifications">Email notifications</label>
+                            <p>Receive updates and alerts via email.</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="email-notifications" name="emailNotifications">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-row__info">
+                            <label for="push-notifications">Push notifications</label>
+                            <p>Get notified about activity in real time.</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="push-notifications" name="pushNotifications">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="security-heading">
+                <div class="card__header">
+                    <h2 id="security-heading">Security</h2>
+                    <p>Keep your account secure.</p>
+                </div>
+                <div class="card__body">
+                    <div class="form-group">
+                        <label for="current-password">Current password</label>
+                        <input type="password" id="current-password" name="currentPassword" autocomplete="current-password">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="new-password">New password</label>
+                            <input type="password" id="new-password" name="newPassword" autocomplete="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm new password</label>
+                            <input type="password" id="confirm-password" name="confirmPassword" autocomplete="new-password">
+                        </div>
+                    </div>
+                    <p class="hint">Leave blank to keep your current password.</p>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="danger-heading">
+                <div class="card__header">
+                    <h2 id="danger-heading">Danger zone</h2>
+                    <p>Irreversible actions for your account.</p>
+                </div>
+                <div class="card__body">
+                    <button type="button" class="btn btn--danger" id="reset-settings">Reset all settings</button>
+                </div>
+            </section>
+
+            <div class="card">
+                <div class="card__footer">
+                    <button type="button" class="btn btn--secondary" id="cancel-btn">Cancel</button>
+                    <button type="submit" class="btn btn--primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/settings.js"></script>
+</body>
+</html>
